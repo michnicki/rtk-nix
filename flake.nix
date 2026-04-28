@@ -39,10 +39,9 @@
       };
     in
     {
-      packages = forAllSystems (system: {
-        rtk = rtkPackage nixpkgs.legacyPackages.${system};
-        default = rtkPackage nixpkgs.legacyPackages.${system};
-      });
+      packages = forAllSystems (system:
+        let pkg = rtkPackage nixpkgs.legacyPackages.${system};
+        in { rtk = pkg; default = pkg; });
 
       overlays.default = final: _prev: {
         rtk = rtkPackage final;
