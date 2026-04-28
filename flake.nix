@@ -25,6 +25,10 @@
           lockFile = ./Cargo.lock;
         };
 
+        # Tests require filesystem access to ~/.config/rtk which is
+        # not available in the Nix sandbox.
+        doCheck = false;
+
         meta = with pkgs.lib; {
           description = "High-performance CLI proxy to minimize LLM token consumption";
           homepage = "https://www.rtk-ai.app";
