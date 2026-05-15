@@ -12,13 +12,13 @@
 
       rtkPackage = pkgs: pkgs.rustPlatform.buildRustPackage {
         pname = "rtk";
-        version = "0.39.0";
+        version = "0.40.0";
 
         src = pkgs.fetchFromGitHub {
           owner = "rtk-ai";
           repo = "rtk";
-          rev = "v0.39.0";
-          hash = "sha256-TX4MtR/rq61wxHWYJAO2x3CYvZtkCoXynf45dRC+MVo=";
+          rev = "v0.40.0";
+          hash = "sha256-xWHIOZRpSyyOPQe/db9dxoODcnheBlpXrnKET010vVg=";
         };
 
         cargoLock = {
