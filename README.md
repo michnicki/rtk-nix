@@ -7,20 +7,20 @@ Nix flake for [rtk](https://github.com/rtk-ai/rtk) — Rust Token Killer, a high
 ### Run without installing
 
 ```shell
-nix run git+https://codeberg.org/tmichnicki/rtk-nix -- --version
+nix run git+https://github.com/michnicki/rtk-nix -- --version
 ```
 
 ### Install to your profile
 
 ```shell
-nix profile install git+https://codeberg.org/tmichnicki/rtk-nix
+nix profile install git+https://github.com/michnicki/rtk-nix
 ```
 
 ### NixOS / nix-darwin flake
 
 ```nix
 {
-  inputs.rtk-nix.url = "git+https://codeberg.org/tmichnicki/rtk-nix";
+  inputs.rtk-nix.url = "git+https://github.com/michnicki/rtk-nix";
 
   outputs = { nixpkgs, rtk-nix, ... }: {
     nixosConfigurations.mymachine = nixpkgs.lib.nixosSystem {
@@ -37,7 +37,7 @@ nix profile install git+https://codeberg.org/tmichnicki/rtk-nix
 
 ```nix
 {
-  inputs.rtk-nix.url = "git+https://codeberg.org/tmichnicki/rtk-nix";
+  inputs.rtk-nix.url = "git+https://github.com/michnicki/rtk-nix";
 
   outputs = { nixpkgs, rtk-nix, ... }: {
     nixosConfigurations.mymachine = nixpkgs.lib.nixosSystem {
